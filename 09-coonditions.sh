@@ -1,7 +1,9 @@
 #!/bin/bash
 
+echo "Please enter a Number::"
 
-NUMBER=$1
+read -s NUMBER #here NUMBER is the variable
+echo "Number entered: $NUMBER"
 
 #-gt, -lt, -eq, -ge, -le 
 if [ $NUMBER -gt 100 ]
