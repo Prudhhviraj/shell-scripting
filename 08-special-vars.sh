@@ -1,6 +1,6 @@
 #! /bin/bash
 
-$A=$HOME
+A=$HOME
 
 echo "All variables passed: $@"
 echo "Number of variables:$#"
