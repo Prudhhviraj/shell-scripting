@@ -1,12 +1,14 @@
 #!/bin/bash
 
-echo "Please enter a Number:$NUMBER"
+A1=$NUMBER
 
-#read -s NUMBER #here NUMBER is the variable
-echo "Number entered: $NUMBER"
+echo "Please enter a Number:$A1"
+
+read -s NUMBER #here NUMBER is the variable
+echo "Number entered: $A1"
 
 #-gt, -lt, -eq, -ge, -le 
-if [ $NUMBER -gt 100 ]
+if [ $A1 -gt 100 ]
 then
     echo "Given number is greater than 100"
 else
