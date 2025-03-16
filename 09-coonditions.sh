@@ -2,7 +2,7 @@
 
 echo "Please enter a Number::"
 
-read -s NUMBER #here NUMBER is the variable
+#read -s NUMBER #here NUMBER is the variable
 echo "Number entered: $NUMBER"
 
 #-gt, -lt, -eq, -ge, -le 
