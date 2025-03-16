@@ -1,0 +1,65 @@
+[33mcommit e50500e6bece9ba058c938d5e1238adf9a7d51c2[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Author: prudh <prudhhviraj2@gmail.com>
+Date:   Sun Mar 16 16:58:20 2025 +0530
+
+    ADDED USERNAME AND PASSWORD VALIDATION
+
+[33mcommit 40717f9ef8967f2ee7b01b507e7ec53d8e982cb8[m
+Author: prudh <prudhhviraj2@gmail.com>
+Date:   Sun Mar 16 14:54:44 2025 +0530
+
+    Read User name
+
+[33mcommit 9faf7fa22c69c47f7d8ff5a3a975383977500c47[m
+Author: prudh <prudhhviraj2@gmail.com>
+Date:   Sun Mar 16 13:31:30 2025 +0530
+
+    arguments will going to create out of package, variables has been assigned as person1 and person2
+
+[33mcommit ce09d9e219416c73d6e5bcd197e16a99ee5db3d2[m
+Author: prudh <prudhhviraj2@gmail.com>
+Date:   Sun Mar 16 13:25:57 2025 +0530
+
+    Conversation
+
+[33mcommit 13068a1fcf960080c838ece260bc6b5d14747617[m
+Author: prudh <prudhhviraj2@gmail.com>
+Date:   Sun Mar 16 13:14:34 2025 +0530
+
+    Conversation between Robert and Rahim
+
+[33mcommit 6c59497c0d079420b6d4e4c4c67c1d402e4963ec[m
+Author: prudh <prudhhviraj2@gmail.com>
+Date:   Sun Mar 16 13:06:28 2025 +0530
+
+    File has been created for variable
+
+[33mcommit 051a7785fe67e49e4944ded64f87d3231bcb9a68[m
+Author: prudh <prudhhviraj2@gmail.com>
+Date:   Sun Mar 16 07:10:24 2025 +0530
+
+    name has been added
+
+[33mcommit 8cd118208ad572bc86626ded61f991251a463789[m
+Author: prudh <prudhhviraj2@gmail.com>
+Date:   Sun Mar 16 06:47:09 2025 +0530
+
+    .sh file has been removed
+
+[33mcommit e6d91ccb9d72b91abd898c3716a37f039fb22452[m
+Author: prudh <prudhhviraj2@gmail.com>
+Date:   Sun Mar 16 06:43:06 2025 +0530
+
+    Hi has been added
+
+[33mcommit dbd7132abf03563998cddec8ce9948069864b41c[m
+Author: prudh <prudhhviraj2@gmail.com>
+Date:   Sun Mar 16 06:35:51 2025 +0530
+
+    Hello world is added
+
+[33mcommit a802e223ed9a61b63c35e7ebe71311fb06d8c70b[m
+Author: Prudhhviraj <145594735+Prudhhviraj@users.noreply.github.com>
+Date:   Sun Mar 16 06:19:22 2025 +0530
+
+    Initial commit
