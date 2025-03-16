@@ -1,6 +1,6 @@
 #!/bin/bash
 
-echo "Please enter a Number::"
+echo "Please enter a Number:$NUMBER"
 
 read -s NUMBER #here NUMBER is the variable
 echo "Number entered: $NUMBER"
