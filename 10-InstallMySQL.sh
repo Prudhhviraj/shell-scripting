@@ -1,8 +1,8 @@
 #!bin/bash
 
-APP1=$(mysql)
-APP2=$(git)
-STATUS=$(dnf list installed $APP1 and $APP2)
+# APP1=$(mysql)
+# APP2=$(git)
+# STATUS=$(dnf list installed $APP1 and $APP2)
 
 USERID=$(id -u)
 
@@ -12,23 +12,23 @@ then
     exit 1
 fi
 
-$STATUS
+dnf list installed mysql
 
 if [ $? -ne 0 ]
 then 
-    dnf install $APP1 -y
+    dnf install mysql -y
     if [ $? -ne 0 ] 
     then 
     echo "Error:: Failed to Install My SQL"
     exit 1
     else 
-    echo "Success:: $APP1 has been installed Successfully"
+    echo "Success:: MYSQL has been installed Successfully"
     fi
 else    
-    echo "$APP1 Already Installed"
+    echo "MYSQL Already Installed"
 fi
 
-$STATUS
+dnf list installed git
 
 if [ $? -ne 0 ]
 then
