@@ -20,7 +20,8 @@ then
     exit 1
     else 
     echo "Success:: MysQL has been installed Successfully"
-else 
+    exit 1
+else    
     echo "MySQL Already Installed"
 fi
 
