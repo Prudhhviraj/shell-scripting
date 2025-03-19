@@ -9,7 +9,7 @@ then
     exit 1
 fi
 
-dnf install mysqlll -y
+dnf install mysqll -y
 
 if [ $? -ne 0 ] 
 then 
