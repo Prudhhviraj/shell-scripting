@@ -10,6 +10,7 @@ then
 fi
 
 dnf list installed mysql &
+sleep 30
 
 if [ $? -ne 0 ]
 then 
@@ -26,6 +27,7 @@ else
 fi
 
 dnf list installed git &
+sleep 30
 
 if [ $? -ne 0 ]
 then
