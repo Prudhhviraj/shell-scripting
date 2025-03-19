@@ -11,7 +11,7 @@ fi
 
 dnf install mysqlll -y
 
-if [ $? -ne 0]
+if [ $? -ne 0 ] 
 then 
     echo "Error:: Failed to Install My SQL"
     exit 1
@@ -21,9 +21,10 @@ fi
 
 dnf install git -y
 
-if [$? -ne 0]
+if [ $? -ne 0 ]
 then 
     echo "Error:: Failed to install GIT"
+    exit 1
 else 
     echo "Success:: GIT has been installed Successfully"
 fi
