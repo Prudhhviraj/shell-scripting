@@ -25,12 +25,17 @@ else
     echo "MySQL Already Installed"
 fi
 
-dnf install git -y
+dnf list installed git
 
 if [ $? -ne 0 ]
-then 
-    echo "Error:: Failed to install GIT"
-    exit 1
-else 
-    echo "Success:: GIT has been installed Successfully"
-fi
+then
+    dnf install git -y
+    if [ $? -ne 0 ]
+    then 
+        echo "Error:: Failed to install GIT"
+        exit 1
+    else 
+        echo "Success:: GIT has been installed Successfully"
+    fi
+else
+    echo "GIT is already Installed
