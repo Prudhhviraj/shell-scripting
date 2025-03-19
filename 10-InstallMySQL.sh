@@ -38,5 +38,5 @@ then
         echo "Success:: GIT has been installed Successfully"
     fi
 else
-    echo "GIT is already Installed
+    echo "GIT is already Installed"
 fi
