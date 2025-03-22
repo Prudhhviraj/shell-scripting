@@ -17,7 +17,7 @@ VALIDATE(){
         echo -e "$2 ... $R Failed to Install $N"
         exit 1
     else 
-        echo -e "$2 ... $G installed Successfully $N"
+        echo -e "$2 ... $G Installed Successfully $N"
     fi
 }
 echo "Script started executing at: $TIMESTAMP" &>>$LOG_FILE_NAME
