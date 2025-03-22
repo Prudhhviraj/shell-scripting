@@ -28,9 +28,8 @@ dnf list installed mysql
         dnf install mysql -y
         VALIDATE $? "Installing....." 
     else    
-        echo -e "$R MYSQL Already Installed "
+        echo -e $Y "MYSQL Already Installed "
     fi
-sleep 2
 
 dnf list installed git
 
