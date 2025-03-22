@@ -4,14 +4,15 @@ USERID=$(id -u)
 R="\e[31m"
 G="\e[32m"
 Y="\e[33m"
+N="\e["
 
 VALIDATE(){
      if [ $1 -ne 0 ] 
     then 
-        echo -e "$2 ... $R Failed to Install My SQL"
+        echo -e "$2 ... $R Failed to Install My SQL $N"
         exit 1
     else 
-        echo -e "$2 ... $G MYSQL has been installed Successfully"
+        echo -e "$2 ... $G MYSQL has been installed Successfully $N"
     fi
 }
 
@@ -28,8 +29,7 @@ dnf list installed mysql
         dnf install mysql -y
         VALIDATE $? "Installing....." 
     else    
-        echo -e "MYSQL Already $Y Installed"
-        exit 1
+        echo -e "MYSQL Already $Y Installed $N" 
     fi
 
 dnf list installed git
@@ -39,5 +39,5 @@ dnf list installed git
         dnf install git -y
         VALIDATE $? "Installing......."
     else
-        echo -e "GIT is already $Y Installed"
+        echo -e "GIT is already $Y Installed $N"
     fi
