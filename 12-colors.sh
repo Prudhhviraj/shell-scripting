@@ -31,12 +31,12 @@ dnf list installed mysql
         echo -e "$Y MYSQL Already Installed "
     fi
 
-dnf list installed git -e $R
+dnf list installed git
 
     if [ $? -ne 0 ]
     then
         dnf install git -y
         VALIDATE $? "Installing......."
     else
-        echo -e "$Y GIT is already Installed"
+        echo -e "GIT is already Installed $Y"
     fi
