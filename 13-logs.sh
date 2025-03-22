@@ -6,7 +6,7 @@ G="\e[32m" #green
 Y="\e[33m" #yellow
 N="\e[0m" #normal color
 
-LOGS_FOLDER="/var/log/shellscript"
+LOGS_FOLDER="/var/log/shell-scripting"
 LOG_FILE=$(echo $0 | cut -d "." -f1)
 TIMESTAMP=$(date +%Y-%m-%dT%I:%M:%S)
 LOG_FILE_NAME="$LOGS_FOLDER/$LOG_FILE-$TIMESTAMP.log"
