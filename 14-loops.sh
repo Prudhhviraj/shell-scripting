@@ -1,10 +1,10 @@
 #!bin/bash
 
 USERID=$(id -u)
-R="\e[31m" #red
-G="\e[32m" #green
-Y="\e[33m" #yellow
-N="\e[0m" #normal color
+R="\e[31m"
+G="\e[32m"
+Y="\e[33m"
+N="\e[0m"
 
 LOGS_FOLDER="/var/log/shellscript-logs"
 LOG_FILE=$(echo $0 | cut -d "." -f1)
@@ -28,22 +28,15 @@ then
     exit 1
 fi
 
-dnf list installed mysql &>>$LOG_FILE_NAME
-
+for package in $@
+do
+    dnf list installed $package &>>$LOG_FILE_NAME
     if [ $? -ne 0 ]
     then 
-        dnf install mysql -y &>>$LOG_FILE_NAME
-        VALIDATE $? "Installing.....MySQL" 
-    else    
-        echo -e "MYSQL Already $Y Installed" $N
-    fi
+        dnf install $package -y &>>$LOG_FILE_NAME
+        VALIDATE $? "Installing $package"
+    else 
+        echo -e "$package is already installed $Y ... Installed $N"
+    fi 
 
-dnf list installed git &>>$LOG_FILE_NAME
-
-    if [ $? -ne 0 ]
-    then
-        dnf install git -y &>>$LOG_FILE_NAME
-        VALIDATE $? "Installing.......GIT"
-    else
-        echo -e "GIT is already $Y Installed" $N
-    fi
+done
