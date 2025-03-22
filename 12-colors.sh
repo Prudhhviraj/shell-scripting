@@ -30,6 +30,7 @@ dnf list installed mysql
     else    
         echo -e "$R MYSQL Already Installed "
     fi
+sleep 2
 
 dnf list installed git
 
