@@ -23,20 +23,20 @@ fi
 
 dnf list installed mysql
 
-if [ $? -ne 0 ]
-then 
-    dnf install mysql -y
-    VALIDATE $? "Installing....." 
-else    
-    echo -e "$Y MYSQL Already Installed "
-fi
+    if [ $? -ne 0 ]
+    then 
+        dnf install mysql -y
+        VALIDATE $? "Installing....." 
+    else    
+        echo -e "$Y MYSQL Already Installed "
+    fi
 
 dnf list installed git
 
-if [ $? -ne 0 ]
-then
-    dnf install git -y
-    VALIDATE $? "Installing......."
-else
-    echo -e "$Y GIT is already Installed"
-fi
+    if [ $? -ne 0 ]
+    then
+        dnf install git -y
+        VALIDATE $? "Installing......."
+    else
+        echo -e "$Y GIT is already Installed"
+    fi
