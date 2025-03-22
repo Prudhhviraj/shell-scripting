@@ -14,10 +14,10 @@ LOG_FILE_NAME="$LOGS_FOLDER/$LOG_FILE-$TIMESTAMP.log"
 VALIDATE(){
      if [ $1 -ne 0 ] 
     then 
-        echo -e "$2 ... $R Failed to Install My SQL $N"
+        echo -e "$2 ... $R Failed to Install$N"
         exit 1
     else 
-        echo -e "$2 ... $G MYSQL has been installed Successfully $N"
+        echo -e "$2 ... $G installed Successfully $N"
     fi
 }
 echo "Script started executing at: $TIMESTAMP" &>>$LOG_FILE_NAME
