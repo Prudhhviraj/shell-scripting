@@ -31,7 +31,7 @@ dnf list installed mysql
         echo -e "$Y MYSQL Already Installed "
     fi
 
-dnf list installed git
+dnf list installed git -e $R
 
     if [ $? -ne 0 ]
     then
