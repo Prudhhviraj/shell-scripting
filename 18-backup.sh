@@ -11,7 +11,7 @@ SOURCE_DIR=$1
 DEST_DIR=$2
 DAYS=${3:-14} # Default to 14 days if not provided
 
-LOGS_FOLDER="/var/log/shellscript-logs"
+LOGS_FOLDER="/home/ec2-user/shellscript-logs"
 LOG_FILE=$(echo $0 | cut -d "." -f1)
 TIMESTAMP=$(date +%Y-%m-%dT%I:%M:%S)
 LOG_FILE_NAME="$LOGS_FOLDER/$LOG_FILE-$TIMESTAMP.log"
@@ -28,7 +28,10 @@ VALIDATE(){
 
 USAGE(){
     echo -e "$R USAGE: $N sh 18-backup.sh <SOURCE_DIR> <DEST_DIR> <DAYS(Optional)>"
+    exit 1
 }
+
+mkdir -p /home/ec2-user/shellscript-logs
 
 if [ $# -lt 2 ]
 then
