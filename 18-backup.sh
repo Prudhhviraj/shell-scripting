@@ -54,17 +54,26 @@ echo "Script started executing at: $TIMESTAMP" &>>$LOG_FILE_NAME
 
 FILES=$(find $SOURCE_DIR -type f -name "*.log" -mtime +$DAYS)
 echo "Files to backup: $FILES" &>>$LOG_FILE_NAME
-if [ -z "$FILES" ]
+if [-n "$FILES"]
 then
-    echo -e "$Y No files to backup $N"
+    echo "Files are: $FILES" 
+    ZIP_FILE="$DEST_DIR/app-logs-$TIMESTAMP.zip"
+    find $SOURCE_DIR -name "*.log" -mtime +$DAYS | zip -@ "$ZIP_FILE"
     exit 1
 else
-    for file in $FILES
-    do
-        cp $file $DEST_DIR &>>$LOG_FILE_NAME
-        VALIDATE $? "Backing up $file to $DEST_DIR"
-    done
+    echo "No files to backup older than $DAYS" &>>$LOG_FILE_NAME
 fi
+# if [ -z "$FILES" ]
+# then
+#     echo -e "$Y No files to backup $N"
+#     exit 1
+# else
+#     for file in $FILES
+#     do
+#         cp $file $DEST_DIR &>>$LOG_FILE_NAME
+#         VALIDATE $? "Backing up $file to $DEST_DIR"
+#     done
+# fi
 echo "Script completed at: $(date +%Y-%m-%dT%I:%M:%S)" &>>$LOG_FILE_NAME
 echo -e "$G Backup completed successfully $N"
 echo -e "$G Backup files are available in $DEST_DIR $N"
