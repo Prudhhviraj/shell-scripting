@@ -51,3 +51,22 @@ then
 fi
 
 echo "Script started executing at: $TIMESTAMP" &>>$LOG_FILE_NAME
+
+FILES=$(find $SOURCE_DIR -type f -name "*.log" -mtime +$DAYS)
+echo "Files to backup: $FILES" &>>$LOG_FILE_NAME
+if [ -z "$FILES" ]
+then
+    echo "No files to backup" &>>$LOG_FILE_NAME
+else
+    for file in $FILES
+    do
+        cp $file $DEST_DIR &>>$LOG_FILE_NAME
+        VALIDATE $? "Backing up $file to $DEST_DIR"
+    done
+fi
+echo "Script completed at: $(date +%Y-%m-%dT%I:%M:%S)" &>>$LOG_FILE_NAME
+echo -e "$G Backup completed successfully $N"
+echo -e "$G Backup files are available in $DEST_DIR $N"
+echo -e "$G Backup files are older than $DAYS days $N"
+echo -e "$G Backup files are in $SOURCE_DIR $N"
+echo -e "$G Backup files are in $LOG_FILE_NAME $N"
