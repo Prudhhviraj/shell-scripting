@@ -68,5 +68,3 @@ echo "Script completed at: $(date +%Y-%m-%dT%I:%M:%S)" &>>$LOG_FILE_NAME
 echo -e "$G Backup completed successfully $N"
 echo -e "$G Backup files are available in $DEST_DIR $N"
 echo -e "$G Backup files are older than $DAYS days $N"
-echo -e "$G Backup files are in $SOURCE_DIR $N"
-echo -e "$G Backup files are in $LOG_FILE_NAME $N"
