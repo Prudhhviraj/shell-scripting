@@ -54,7 +54,7 @@ echo "Script started executing at: $TIMESTAMP" &>>$LOG_FILE_NAME
 
 FILES=$(find $SOURCE_DIR -type f -name "*.log" -mtime +$DAYS)
 echo "Files to backup: $FILES" &>>$LOG_FILE_NAME
-if [-n "$FILES"]
+if [ -n "$FILES" ]
 then
     echo "Files are: $FILES" 
     ZIP_FILE="$DEST_DIR/app-logs-$TIMESTAMP.zip"
