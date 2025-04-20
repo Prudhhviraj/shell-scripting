@@ -59,9 +59,6 @@ then
     echo "Files are: $FILES" 
     ZIP_FILE="$DEST_DIR/app-logs-$TIMESTAMP.zip"
     find $SOURCE_DIR -name "*.log" -mtime +$DAYS | zip -@ "$ZIP_FILE"
-    echo -e "$G Backup completed successfully $N"
-    echo -e "$G Backup files are available in $DEST_DIR $N"
-    echo -e "$G Backup files are older than $DAYS days $N"
     exit 1
 else
     echo "No files to backup older than $DAYS" &>>$LOG_FILE_NAME
@@ -78,3 +75,6 @@ fi
 #     done
 # fi
 echo "Script completed at: $(date +%Y-%m-%dT%I:%M:%S)" &>>$LOG_FILE_NAME
+echo -e "$G Backup completed successfully $N"
+echo -e "$G Backup files are available in $DEST_DIR $N"
+echo -e "$G Backup files are older than $DAYS days $N"
